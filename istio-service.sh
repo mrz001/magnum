@@ -25046,9 +25046,9 @@ webhooks:
     sideEffects: None
 EOF
     }
-    DOCKER_REPLACE="${CONTAINER_INFRA_PREFIX:-docker.io}"
-    QUAY_REPLACE="${CONTAINER_INFRA_PREFIX:-quay.io}"
-    GRAFANA_REPLACE="${CONTAINER_INFRA_PREFIX:-grafana}"
+    DOCKER_REPLACE="${CONTAINER_INFRA_PREFIX:-docker.io/}"
+    QUAY_REPLACE="${CONTAINER_INFRA_PREFIX:-quay.io/}"
+    GRAFANA_REPLACE="${CONTAINER_INFRA_PREFIX:-grafana/}"
     sed -i "s!docker.io/!$DOCKER_REPLACE!g" ${KUBE_ISTIO_DEPLOY}
     sed -i "s!quay.io/!$QUAY_REPLACE!g" ${KUBE_ISTIO_DEPLOY}
     sed -i "s!grafana/grafana!${GRAFANA_REPLACE}grafana!g" ${KUBE_ISTIO_DEPLOY}
