@@ -49,7 +49,7 @@ verifySupported() {
 }
 checkDesiredVersion() {
   if [ "x$DESIRED_VERSION" == "x" ]; then
-    TAG="v2.16.1"
+    TAG="v3.4.2"
   else
     TAG=$DESIRED_VERSION
   fi
